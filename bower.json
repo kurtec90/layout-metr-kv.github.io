@@ -1,0 +1,10 @@
+{
+    "name": "****_layout",
+    "version": "1.0.0",
+    "authors": [
+        "Alexandr Nesterenko <kurtec90@gmail.com>"
+    ],
+    "dependencies": {
+    	"bootstrap": "3.3.4"
+    }
+}
