@@ -1,10 +1,11 @@
 {
-    "name": "****_layout",
-    "version": "1.0.0",
-    "authors": [
-        "Alexandr Nesterenko <kurtec90@gmail.com>"
-    ],
-    "dependencies": {
-    	"bootstrap": "3.3.4"
-    }
+  "name": "metr_kv_layout",
+  "version": "1.0.0",
+  "authors": [
+    "Alexandr Nesterenko <kurtec90@gmail.com>"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.4",
+    "seiyria-bootstrap-slider": "~4.10.4"
+  }
 }

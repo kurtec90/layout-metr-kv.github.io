@@ -7,6 +7,7 @@
     <title>Метр квадратный</title>
     <!-- Bootstrap -->
     <link href="dependencies/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dependencies/seiyria-bootstrap-slider/css/bootstrap-slider.css" rel="stylesheet">
     <!-- CSS -->
     <link href="css/style.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -17,7 +18,7 @@
   </head>
   <body>
     <div class="container-fluid wrapper">
-      <header class="row">
+        <header class="row">
             <div class="col-md-12 header_top">
                 <div class="phone_number">
                     <span class="small_text">/067/</span>
@@ -120,6 +121,101 @@
                 </ol>
             </div>
         </header>
+        <section class="row with_dashes_border">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                <div class="sidebar">
+                    <div class="catalog">
+                        <p class="text-center">КАТАЛОГ</p>
+                        <div id="tree"></div>
+                        <!--Второй экземляр меню-->
+                        <!--<ul class="layout1">
+                            <li><a href="#">Цемент</a></li>
+                            <li><a href="#">Добавки в бетон</a></li>
+                            <li><a href="#">Трубы асбестоцементные</a></li>
+                            <li><a href="#">Минеральные вяжущие</a>
+                                <ul class="layout2 close_list">
+                                    <li><a href="#">Продукт 1</a></li>
+                                    <li><a href="#">Продукт 2</a></li>
+                                    <li><a href="#">Продукт 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Сыпучие материалы</a></li>
+                            <li><a href="#">Гипсокартонные системы</a></li>
+                            <li><a href="#">Строительные смеси</a>
+                                <ul class="layout2 close_list">
+                                    <li><a href="#">Продукт 1</a></li>
+                                    <li><a href="#">Продукт 2</a></li>
+                                    <li><a href="#">Продукт 3</a></li>
+                                    <li><a href="#">Продукт 4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Утеплители</a>
+                                <ul class="layout2 close_list">
+                                    <li><a href="#">Продукт 1</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Линии раздач</a></li>
+                            <li><a href="#">Инструмент</a>
+                                <ul class="layout2 close_list">
+                                    <li><a href="#">Аксессуары для электроинструмента</a></li>
+                                    <li><a href="#">Измерительный инструмент</a>
+                                        <ul class="layout3 close_list">
+                                            <li><a href="#">Малярный инструмент</a></li>
+                                            <li><a href="#">Бензоинструмент</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Сантехника</a></li>
+                        </ul>-->
+                    </div>
+
+                    <aside class="filter hidden-xs">
+                        <p>ПОДОБРАТЬ</p>
+                        <div class="active_filter">
+                            <p>Активные фильтры</p>
+                            <div class="text-left active_filter_list">
+                                <span class="small_text">Цена: 1200-1400 грн <img src="img/sidebar/del_filter.png"></span><br>
+                                <span class="small_text">Производители: INOX <img src="img/sidebar/del_filter.png"></span>
+                            </div>
+                            <div class="button_filter_block">
+                                <button>Очистить фильтр</button>
+                            </div>
+                        </div>
+                        <div class="list_filter">
+                            <p>Цена</p>
+
+                            <input id="ex2" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[10,1000]"/>
+                            <div class="price_zone">
+                                <div class="price_zone_left"><b>€ 10</b></div>
+                                <div class="price_zone_right"><b>€ 1000</b></div>
+                            </div>
+                            <p>Бренд</p>
+                            <div class="text-left">
+                                <input type="checkbox"><label>Whirlpower</label><br>
+                                <input type="checkbox"><label>INOX</label><br>
+                                <input type="checkbox"><label>MASTROEWT</label><br>
+                                <input type="checkbox"><label>Bartscher</label><br>
+                            </div>
+                            <p>Диаметр, см</p>
+                            <div class="text-left">
+                                <input type="checkbox"><label>55</label><br>
+                                <input type="checkbox"><label>60</label><br>
+                                <input type="checkbox"><label>66</label><br>
+                                <input type="checkbox"><label>70</label><br>
+                                <input type="checkbox"><label>77</label><br>
+                                <input type="checkbox"><label>80</label><br>
+                            </div>
+                            
+                            <div class="button_filter_block">
+                                <button>Показать</button>
+                            </div>
+
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
     </div>
 
 
@@ -129,6 +225,8 @@
     <script src="dependencies/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="dependencies/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="dependencies/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+    <script src="dependencies/seiyria-bootstrap-slider/js/bootstrap-slider.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

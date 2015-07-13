@@ -6616,7 +6616,7 @@ body {
   color: black;
 }
 .strong_link a:hover {
-  font-weight: 900;
+  font-weight: normal;
   border-bottom: 2px solid #ffc633;
 }
 /*header*/
@@ -6749,7 +6749,7 @@ body {
   color: black;
 }
 .header_menu #header_menu_list a:hover {
-  font-weight: 900;
+  font-weight: normal;
   border-bottom: 2px solid #ffc633;
 }
 .header_menu #header_menu_list a:hover {
@@ -6802,11 +6802,11 @@ body {
   color: black;
 }
 .sidebar .catalog p a:hover {
-  font-weight: 900;
+  font-weight: normal;
   border-bottom: 2px solid #ffc633;
 }
 .sidebar .catalog ul {
-  font-size: 0.875em;
+  font-size: 13px;
   list-style-type: none;
 }
 .sidebar .catalog ul a {
@@ -6814,7 +6814,7 @@ body {
   color: black;
 }
 .sidebar .catalog ul a:hover {
-  font-weight: 900;
+  font-weight: normal;
   border-bottom: 2px solid #ffc633;
 }
 .sidebar .catalog ul li {
@@ -6919,6 +6919,29 @@ body {
   margin: 0px 0px 10px 0px;
   font-weight: 900;
   font-size: 1em;
+}
+.sidebar .filter .list_filter b {
+  font-size: 12px;
+}
+.sidebar .filter .list_filter .slider-horizontal {
+  width: 170px;
+  margin-left: 38px;
+}
+.sidebar .filter .list_filter .slider-horizontal .slider-handle {
+  background-color: #ffc633;
+  background-image: linear-gradient(to bottom, #ffc633 0%, #ffc633 100%);
+}
+.sidebar .filter .list_filter .price_zone {
+  margin-left: 28px;
+  margin-right: 26px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.sidebar .filter .list_filter .price_zone .price_zone_left {
+  float: left;
+}
+.sidebar .filter .list_filter .price_zone .price_zone_right {
+  float: right;
 }
 .sidebar .filter .list_filter div.text-left {
   margin: 0px 0px 15px 28px;
