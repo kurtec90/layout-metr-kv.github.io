@@ -6703,6 +6703,11 @@ body {
   margin-bottom: 0px;
   border: none;
 }
+.header_menu .navbar .menu_button {
+  background-color: #ffc633;
+  border: 0;
+  border-radius: 4px;
+}
 .header_menu .navbar-form input {
   width: 170px;
   height: 30px;
@@ -6784,9 +6789,15 @@ body {
 /*sidebar*/
 .sidebar {
   padding-bottom: 15px;
+  width: 260px;
+  float: left;
+}
+.sidebar .navbar {
+  border: none;
+  background-color: white!important;
 }
 .sidebar .catalog {
-  width: 95%;
+  width: 100%;
   margin: 10px 0px 0px 0px;
   padding: 15px 0px 5px 0px;
   border: 2px solid #d1d1d1;
@@ -6881,7 +6892,7 @@ body {
   margin-top: 25px;
 }
 .sidebar .filter .active_filter {
-  width: 95%;
+  width: 100%;
   margin: 10px 0px 0px 0px;
   padding: 15px 0px 5px 0px;
   border: 2px solid #d1d1d1;
@@ -6894,7 +6905,7 @@ body {
   font-size: 1em;
 }
 .sidebar .filter .active_filter .active_filter_list {
-  margin: 15px 0px 0px 28px;
+  margin: 15px 0px 0px 35px;
 }
 .sidebar .filter .active_filter .active_filter_list span {
   display: inline-block;
@@ -6908,7 +6919,7 @@ body {
   top: -2px;
 }
 .sidebar .filter .list_filter {
-  width: 95%;
+  width: 100%;
   margin: 10px 0px 0px 0px;
   padding: 15px 0px 5px 0px;
   border: 2px solid #d1d1d1;
@@ -6920,20 +6931,23 @@ body {
   font-weight: 900;
   font-size: 1em;
 }
+.sidebar .filter .list_filter p.text_price {
+  margin-bottom: 20px;
+}
 .sidebar .filter .list_filter b {
   font-size: 12px;
 }
 .sidebar .filter .list_filter .slider-horizontal {
   width: 170px;
-  margin-left: 38px;
+  margin-left: 45px;
 }
 .sidebar .filter .list_filter .slider-horizontal .slider-handle {
   background-color: #ffc633;
   background-image: linear-gradient(to bottom, #ffc633 0%, #ffc633 100%);
 }
 .sidebar .filter .list_filter .price_zone {
-  margin-left: 28px;
-  margin-right: 26px;
+  margin-left: 35px;
+  margin-right: 30px;
   margin-bottom: 10px;
   overflow: hidden;
 }
@@ -6943,15 +6957,15 @@ body {
 .sidebar .filter .list_filter .price_zone .price_zone_right {
   float: right;
 }
-.sidebar .filter .list_filter div.text-left {
-  margin: 0px 0px 15px 28px;
+.sidebar .filter .list_filter .filter_checkbox {
+  margin: 0px 0px 15px 35px;
   font-size: 0.75em;
   color: #666666;
 }
-.sidebar .filter .list_filter div.text-left label {
+.sidebar .filter .list_filter .filter_checkbox label {
   font-weight: 400;
 }
-.sidebar .filter .list_filter div.text-left input {
+.sidebar .filter .list_filter .filter_checkbox input {
   margin-right: 5px;
 }
 .sidebar .filter .list_filter button {
@@ -6988,6 +7002,9 @@ body {
   }
   .header_path {
     display: none;
+  }
+  .sidebar .collapse_category {
+    margin-left: 45%!important;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -7061,8 +7078,46 @@ body {
     color: #666666;
     font-weight: bold;
   }
-  .sidebar .catalog {
+  .sidebar {
     width: 100%;
+    float: none;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .sidebar nav,
+  .sidebar aside {
+    margin-bottom: 0;
+  }
+  .sidebar .navbar-header {
+    border-bottom: 1px dashed #999999;
+  }
+  .sidebar .collapse_category {
+    float: left;
+    margin-top: 15px;
+    margin-left: 70%;
+  }
+  .sidebar .collapse_category span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .sidebar .catalog p {
+    display: none;
+  }
+  .sidebar .filter {
+    text-align: center;
+  }
+  .sidebar .filter .active_filter_list,
+  .sidebar .filter .filter_checkbox {
+    margin-left: 0px!important;
+    text-align: center;
+  }
+  .sidebar .filter .slider-horizontal {
+    margin-left: 0px!important;
+  }
+  .sidebar .filter .price_zone {
+    width: 190px;
+    margin-left: auto!important;
+    margin-right: auto!important;
   }
   .view_1 {
     text-align: center;

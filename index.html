@@ -81,12 +81,7 @@
                                     <input type="search" name="q">
                                     <button type="button" class="btn-sm"></button>
                                 </form>
-                                <button type="button" class="navbar-toggle menu_button" data-toggle="collapse" data-target="#header_menu_list">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
+                                <button type="button" class="navbar-toggle menu_button btn-default" data-toggle="collapse" data-target="#header_menu_list"><strong>Меню</strong></button>
                             </div>
                             <div class="collapse navbar-collapse" id="header_menu_list">
                                 <ul class="nav nav-pills navbar-nav">
@@ -122,11 +117,25 @@
             </div>
         </header>
         <section class="row with_dashes_border">
-            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
-                <div class="sidebar">
-                    <div class="catalog">
-                        <p class="text-center">КАТАЛОГ</p>
-                        <div id="tree"></div>
+            <div class="sidebar">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <div class="visible-xs collapse_category">
+                                <span>Каталог</span>
+                            </div>
+                            <button type="button" class="navbar-toggle menu_button" data-toggle="collapse" data-target="#sidebar_catalog">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="sidebar_catalog">
+                            <div class="catalog">
+                                <p class="text-center">КАТАЛОГ</p>
+                                <div id="tree"></div>
+
                         <!--Второй экземляр меню-->
                         <!--<ul class="layout1">
                             <li><a href="#">Цемент</a></li>
@@ -167,53 +176,70 @@
                                 </ul>
                             </li>
                             <li><a href="#">Сантехника</a></li>
-                        </ul>-->
+                            </ul>-->
+
+                            </div>
+                        </div>
                     </div>
-
-                    <aside class="filter hidden-xs">
-                        <p>ПОДОБРАТЬ</p>
-                        <div class="active_filter">
-                            <p>Активные фильтры</p>
-                            <div class="text-left active_filter_list">
-                                <span class="small_text">Цена: 1200-1400 грн <img src="img/sidebar/del_filter.png"></span><br>
-                                <span class="small_text">Производители: INOX <img src="img/sidebar/del_filter.png"></span>
+                </nav>
+                <aside class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <div class="visible-xs collapse_category">
+                                <span>Фильтр</span>
                             </div>
-                            <div class="button_filter_block">
-                                <button>Очистить фильтр</button>
+                            <button type="button" class="navbar-toggle menu_button" data-toggle="collapse" data-target="#sidebar_filter">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="sidebar_filter">
+                            <div class="filter">
+                                <div class="active_filter">
+                                    <p>Активные фильтры</p>
+                                    <div class="active_filter_list">
+                                        <span class="small_text">Цена: 1200-1400 € <img src="img/sidebar/del_filter.png"></span><br>
+                                        <span class="small_text">Производители: INOX <img src="img/sidebar/del_filter.png"></span>
+                                    </div>
+                                    <div class="button_filter_block">
+                                        <button>Очистить фильтр</button>
+                                    </div>
+                                </div>
+                                <div class="list_filter">
+                                    <p class="text_price">Цена</p>
+
+                                    <input id="ex2" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[10,1000]"/>
+                                    <div class="price_zone">
+                                        <div class="price_zone_left"><b>€ 10</b></div>
+                                        <div class="price_zone_right"><b>€ 1000</b></div>
+                                    </div>
+                                    <p>Бренд</p>
+                                    <div class="filter_checkbox">
+                                        <input type="checkbox"><label>Whirlpower</label><br>
+                                        <input type="checkbox"><label>INOX</label><br>
+                                        <input type="checkbox"><label>MASTROEWT</label><br>
+                                        <input type="checkbox"><label>Bartscher</label><br>
+                                    </div>
+                                    <p>Диаметр, см</p>
+                                    <div class="filter_checkbox">
+                                        <input type="checkbox"><label>55</label><br>
+                                        <input type="checkbox"><label>60</label><br>
+                                        <input type="checkbox"><label>66</label><br>
+                                        <input type="checkbox"><label>70</label><br>
+                                        <input type="checkbox"><label>77</label><br>
+                                        <input type="checkbox"><label>80</label><br>
+                                    </div>
+                                    <div class="button_filter_block">
+                                        <button>Показать</button>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
-                        <div class="list_filter">
-                            <p>Цена</p>
-
-                            <input id="ex2" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[10,1000]"/>
-                            <div class="price_zone">
-                                <div class="price_zone_left"><b>€ 10</b></div>
-                                <div class="price_zone_right"><b>€ 1000</b></div>
-                            </div>
-                            <p>Бренд</p>
-                            <div class="text-left">
-                                <input type="checkbox"><label>Whirlpower</label><br>
-                                <input type="checkbox"><label>INOX</label><br>
-                                <input type="checkbox"><label>MASTROEWT</label><br>
-                                <input type="checkbox"><label>Bartscher</label><br>
-                            </div>
-                            <p>Диаметр, см</p>
-                            <div class="text-left">
-                                <input type="checkbox"><label>55</label><br>
-                                <input type="checkbox"><label>60</label><br>
-                                <input type="checkbox"><label>66</label><br>
-                                <input type="checkbox"><label>70</label><br>
-                                <input type="checkbox"><label>77</label><br>
-                                <input type="checkbox"><label>80</label><br>
-                            </div>
-                            
-                            <div class="button_filter_block">
-                                <button>Показать</button>
-                            </div>
-
-                        </div>
-                    </aside>
-                </div>
+                    </div>
+                </aside>
             </div>
         </section>
     </div>

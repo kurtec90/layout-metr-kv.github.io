@@ -101,6 +101,11 @@ $(document).ready(function () {
 
 	$("#ex2").slider({});
 
+
+
+
+
+
 		/*Каталог*/
 
 	var array_li = $('.layout1 li');
