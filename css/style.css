@@ -7285,10 +7285,10 @@ footer .footer_block {
   background-size: 250px;
   height: 150px;
 }
-footer div {
+footer .footer_logo {
   height: 150px;
 }
-footer div .logo {
+footer .footer_logo .logo {
   width: 230px;
   margin-top: 45px;
 }
@@ -7506,9 +7506,16 @@ footer .footer_info span {
   section {
     border-bottom: 0px!important;
   }
+  footer {
+    height: 115px!important;
+  }
   footer .footer_block {
-    padding-left: 2px!important;
-    padding-right: 2px!important;
+    padding-left: 5px!important;
+    padding-right: 5px!important;
+    height: 115px!important;
+  }
+  footer .footer_info {
+    text-align: center;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
