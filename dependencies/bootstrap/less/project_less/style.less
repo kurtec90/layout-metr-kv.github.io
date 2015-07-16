@@ -16,11 +16,10 @@ body{
 	margin-left: 10%;
 	margin-right: 10%;
 }
-
-@media only screen and (max-width: @screen-md-min){
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
 	.wrapper{
-  		margin-left: 5%;
-  		margin-right: 5%;
+		margin-left: 2%;
+		margin-right: 2%;
 	}
 }
 @media only screen and (max-width: @screen-sm-min){
@@ -561,7 +560,6 @@ body{
 
 .view_2{
 	display: none;
-	z-index: 1;
 }
 
 .goods_view_2{
@@ -586,7 +584,7 @@ body{
 	.goods_price{
 		float: left;
 		width: 100px;
-		margin: 25px 0px 15px 20px;	
+		margin: 25px 0px 15px 20px;
 		.normal_bold_text;
 		button{
 			margin-top: 10px;
@@ -605,61 +603,27 @@ body{
 		.one_row{
 			margin-top: 5px;
 			margin-bottom: 5px;
+			margin-left: 100px;
 		}
-		.number_text{
-			float: left;
-		}
-		.button_group{
-			margin-left: 195px;
-			padding-top: 7px;
-			text-align: left;
-			input{
-				line-height: 1em;
-				position: relative;
-				top: -3px;
-				left: -5px;
-				text-align: center;
-				font-size: @font-size-small;
-				font-weight: bold;
-				color: black;
-				width: 30px;
-				height: 16px;
-				margin: 0px;
-				padding: 0px;
-				border: 1px solid @gray;
-				outline: none; /* Убираем свечение в Chrome и Safari */
-    			-webkit-appearance: none; /* Убираем рамку в Chrome и Safari */
-			}			
-			button{
-				width: 18px;
-				height: 16px;
-				margin: 0px;
-				padding: 0px;
-				border: 1px solid #666666;
-				background-color: white;
-				outline: none; /* Убираем свечение в Chrome и Safari */
-    			-webkit-appearance: none; /* Убираем рамку в Chrome и Safari */
-				span{
-					font-weight: bold;
-					position: relative;
-				}
-			}
-			.minus{
-				border-radius: 3px 0px 0px 3px;
-				position: relative;
-				span{
-					top: -8px;
-				}
-			}
-			.plus{
-				border-radius: 0px 3px 3px 0px;
-				position: relative;
-				left: -9px;
-				span{
-					top: -2px;
-				}
-				
-			}
+		.goods_number{
+			width: 150px;
+			margin: 0;
+			margin-top: 8px;
+  			input{
+  				height: 20px;
+  				padding: 0;
+  				font-size: 10px;
+  				text-align: center;
+  			}
+  			button{
+  				height: 20px;
+  				width: 20px;
+  				padding: 0;
+  				font-size: 10px;
+  				span{
+  					vertical-align: top;
+  				}
+  			}
 		}
 	}
 	.goods_full_description{
@@ -719,11 +683,6 @@ div.paginator_block{
 		}
 	}
 	.sort{
-		.static_text{
-			.sort_static_text{
-				display: none;
-			}
-		}
 		.sort_by{
 			.dropdown{
 				ul{
@@ -826,7 +785,7 @@ div.paginator_block{
 		.collapse_category{
 			float: left;
 			margin-top: 15px;
-			margin-left: 70%;
+			margin-left: 68%;
 			span{
 				font-size: 20px;
 				font-weight: bold;
@@ -859,16 +818,27 @@ div.paginator_block{
 		margin-right: 5px;
 	}
 	.sort{
+		height: 50px;
+		.sort_list{
+			text-align: center;
+			.static_text{
+				float: none;
+			}
+		}
 		.sort_by{
+			float: none;
 			.dropdown{
 				ul{
 					left: -70px!important;
+				}
+				button{
+					margin-top: 5px;
 				}
 			}
 		}
 	}
 	.view_1{
-		text-align: center;
+		display: block!important;
 		.goods_place_left, .goods_place_center, .goods_place_right, .col-sm-12{
 			padding: 5px;
 		}
@@ -877,6 +847,9 @@ div.paginator_block{
 			margin-left: auto;
 			margin-right: auto;
 		}
+	}
+	.view_2{
+		display: none!important;
 	}
 	section{
 		border-bottom: 0px!important;
@@ -923,20 +896,6 @@ div.paginator_block{
 			padding: 0px 4px 0px 4px;
 		}
 	}
-	.goods_view_2{
-		.goods_price{
-			margin-top: 15px;
-		}
-		.goods_description{
-			margin-top: 10px;
-			.one_row{
-				margin: 0px;
-			}
-			.button_group{
-				padding-top: 2px;
-			}
-		}
-	}
 	.similar_products{
 		.arrow_left, .arrow_right{
 			width: 90%;
@@ -960,6 +919,11 @@ div.paginator_block{
 			span{
 				margin-left: 2px;
 			}
+		}
+	}
+	.view_1{
+		.goods_place_left, .goods_place_center, .goods_place_right, .col-sm-12{
+			padding: 0px 4px 0px 4px;
 		}
 	}
 }

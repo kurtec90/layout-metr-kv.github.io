@@ -174,55 +174,79 @@ $(document).ready(function () {
 
 		/*Выбор количества товаров*/
 
-	$('.button_group input').keydown(function(e){
-        var key = e.charCode || e.keyCode || 0;
-        /*Разрешаем: Backspace, Tab, Home, End, Insert, Delete, Ctrl+A,
-        Ctrl+C, Ctrl+V, Ctrl+X, Ctrl+Z, Стрелки, Цифры, NumPad
-         */
-        return (
-            key == 8
-                || key == 9
-                || key == 35
-                || key == 36
-                || key == 45
-                || key == 46
-                || (key == 65 && e.ctrlKey)
-                || (key == 67 && e.ctrlKey)
-                || (key == 86 && e.ctrlKey)
-                || (key == 88 && e.ctrlKey)
-                || (key == 90 && e.ctrlKey)
-                || (key >= 37 && key <= 40)
-                || (key >= 48 && key <= 57 && !e.shiftKey)
-                || (key >= 96 && key <= 105)
-            );
-    });
+	$('.btn-number').click(function(e){
+	    e.preventDefault();
 
-	$(".plus").click(function () {
-		var el_input = $(this).prev();
-			val = parseFloat($(el_input).val());
+	    fieldName = $(this).attr('data-field');
+	    type      = $(this).attr('data-type');
+	    var input = $("input[name='"+fieldName+"']");
 
-		if (isNaN(val)) {
-			val = 0;
-		}
-		var	new_val = val + 1;
+	    var currentVal = parseInt(input.val());
+	    if (!isNaN(currentVal)) {
+	        if(type == 'minus') {
 
-		$(el_input).val(new_val);
+	            if(currentVal > input.attr('min')) {
+	                input.val(currentVal - 1).change();
+	            }
+	            if(parseInt(input.val()) == input.attr('min')) {
+	                $(this).attr('disabled', true);
+	            }
+
+	        } else if(type == 'plus') {
+
+	            if(currentVal < input.attr('max')) {
+	                input.val(currentVal + 1).change();
+	            }
+	            if(parseInt(input.val()) == input.attr('max')) {
+	                $(this).attr('disabled', true);
+	            }
+
+	        }
+	    } else {
+	        input.val(0);
+	    }
+	});
+	$('.input-number').focusin(function(){
+	   $(this).data('oldValue', $(this).val());
+	});
+	$('.input-number').change(function() {
+
+	    minValue =  parseInt($(this).attr('min'));
+	    maxValue =  parseInt($(this).attr('max'));
+	    valueCurrent = parseInt($(this).val());
+
+	    name = $(this).attr('name');
+	    if(valueCurrent >= minValue) {
+	        $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
+	    } else {
+	        alert('Sorry, the minimum value was reached');
+	        $(this).val($(this).data('oldValue'));
+	    }
+	    if(valueCurrent <= maxValue) {
+	        $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
+	    } else {
+	        alert('Sorry, the maximum value was reached');
+	        $(this).val($(this).data('oldValue'));
+	    }
+
+	});
+	$(".input-number").keydown(function (e) {
+	    // Allow: backspace, delete, tab, escape, enter and .
+	    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+	         // Allow: Ctrl+A
+	        (e.keyCode == 65 && e.ctrlKey === true) ||
+	         // Allow: home, end, left, right
+	        (e.keyCode >= 35 && e.keyCode <= 39)) {
+	             // let it happen, don't do anything
+	             return;
+	    }
+	    // Ensure that it is a number and stop the keypress
+	    if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+	        e.preventDefault();
+	    }
 	});
 
-	$(".minus").click(function () {
-		var el_input = $(this).next();
-			val = parseFloat($(el_input).val());
-			console.log(val);
-		if (val === 1 || isNaN(val)) {
-			val = 2;
-		}
 
-		var new_val = val - 1;
-
-		$(el_input).val(new_val);
-	});
-
-	
 		/*Похожие товары*/
 
 	$(".similar_products .goods_view_1").mouseover(function (event) {
@@ -241,76 +265,5 @@ $(document).ready(function () {
 
 
 
-$('.btn-number').click(function(e){
-    e.preventDefault();
-    
-    fieldName = $(this).attr('data-field');
-    type      = $(this).attr('data-type');
-    var input = $("input[name='"+fieldName+"']");
-    var currentVal = parseInt(input.val());
-    if (!isNaN(currentVal)) {
-        if(type == 'minus') {
-            
-            if(currentVal > input.attr('min')) {
-                input.val(currentVal - 1).change();
-            } 
-            if(parseInt(input.val()) == input.attr('min')) {
-                $(this).attr('disabled', true);
-            }
-
-        } else if(type == 'plus') {
-
-            if(currentVal < input.attr('max')) {
-                input.val(currentVal + 1).change();
-            }
-            if(parseInt(input.val()) == input.attr('max')) {
-                $(this).attr('disabled', true);
-            }
-
-        }
-    } else {
-        input.val(0);
-    }
-});
-$('.input-number').focusin(function(){
-   $(this).data('oldValue', $(this).val());
-});
-$('.input-number').change(function() {
-    
-    minValue =  parseInt($(this).attr('min'));
-    maxValue =  parseInt($(this).attr('max'));
-    valueCurrent = parseInt($(this).val());
-    
-    name = $(this).attr('name');
-    if(valueCurrent >= minValue) {
-        $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
-    } else {
-        alert('Sorry, the minimum value was reached');
-        $(this).val($(this).data('oldValue'));
-    }
-    if(valueCurrent <= maxValue) {
-        $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
-    } else {
-        alert('Sorry, the maximum value was reached');
-        $(this).val($(this).data('oldValue'));
-    }
-    
-    
-});
-$(".input-number").keydown(function (e) {
-        // Allow: backspace, delete, tab, escape, enter and .
-        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
-             // Allow: Ctrl+A
-            (e.keyCode == 65 && e.ctrlKey === true) || 
-             // Allow: home, end, left, right
-            (e.keyCode >= 35 && e.keyCode <= 39)) {
-                 // let it happen, don't do anything
-                 return;
-        }
-        // Ensure that it is a number and stop the keypress
-        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
-            e.preventDefault();
-        }
-    });		
 
 });
