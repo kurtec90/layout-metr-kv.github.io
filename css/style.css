@@ -7223,6 +7223,110 @@ div.paginator_block ul li a:hover {
   background-color: white!important;
   color: #ffc633 !important;
 }
+/*Похожие товары*/
+.similar_products {
+  padding-bottom: 30px;
+}
+.similar_products .arrow_left,
+.similar_products .arrow_right {
+  position: absolute;
+  width: 80%;
+  height: 200px;
+}
+.similar_products .arrow_left img {
+  position: relative;
+  left: -40px;
+  top: 12em;
+  cursor: pointer;
+}
+.similar_products .arrow_right img {
+  position: relative;
+  right: -40px;
+  top: 12em;
+  cursor: pointer;
+}
+.similar_products p {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: 900;
+  text-align: center;
+}
+.similar_products .goods_place {
+  padding-right: 2.5%;
+  padding-left: 2.5%;
+}
+.similar_products .goods_description p {
+  margin-top: 0px;
+  font-weight: normal;
+}
+.similar_products .full_description {
+  display: none;
+  padding-bottom: 15px;
+  font-size: 0.75em;
+  color: #666666;
+  text-align: justify;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*FOOTER*/
+footer {
+  font-size: 0.75em;
+  color: #666666;
+  background-color: #ffc633;
+  height: 150px;
+}
+footer .footer_block {
+  padding-left: 10%;
+  padding-right: 10%;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  -moz-background-position-y: center;
+  background-size: 250px;
+  height: 150px;
+}
+footer div {
+  height: 150px;
+}
+footer div .logo {
+  width: 230px;
+  margin-top: 45px;
+}
+footer .footer_menu {
+  padding-top: 30px;
+}
+footer .footer_menu ul {
+  list-style-type: none;
+}
+footer .footer_menu ul li {
+  width: 49%;
+}
+footer .footer_menu ul li a {
+  margin: 0px;
+  padding: 0px;
+  color: black;
+}
+footer .footer_menu ul li a:hover {
+  font-weight: bold;
+  color: black;
+  background-color: #ffc633 !important;
+}
+footer .footer_info {
+  padding-top: 30px;
+}
+footer .footer_info a,
+footer .footer_info a:hover {
+  color: #666666;
+  border-bottom: 1px dotted #666666;
+  text-decoration: none;
+}
+footer .footer_info img {
+  height: 10px;
+  margin-right: 3px;
+}
+footer .footer_info span {
+  color: black;
+}
 @media only screen and (max-width: 480px) {
   .header_logo .logo_place {
     height: auto;

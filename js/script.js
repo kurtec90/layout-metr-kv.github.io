@@ -259,11 +259,7 @@ $(document).ready(function () {
 	});
 	$(".similar_products .goods_view_1").click(function (event) {
 		event = event || window.event;
-		var url = "http://worktemplate.ua/#";
+		var url = document.location.href + "#";
 		$(location).attr('href',url);
 	});
-
-
-
-
 });
